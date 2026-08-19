@@ -1,0 +1,20 @@
+# Hermes skill 文件（不属于终端应用仓库）
+SKILL.md
+templates/
+scripts/sw_modify.py
+scripts/extract_full.py
+scripts/extract_sw_params.py
+
+# Python 编译缓存
+__pycache__/
+*.pyc
+
+# SolidWorks 临时文件
+~$*
+*.swp
+
+# 快照（本地修改历史，不属于仓库）
+.sw_snapshots/
+
+# 输出文件
+output/
