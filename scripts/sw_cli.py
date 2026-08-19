@@ -65,7 +65,10 @@ class SWParamCLI:
 
     # ---------- 基础 ----------
     def _open_model(self):
-        model = self.sw.OpenDoc(self.sldprt_path, swDocPART)
+        try:
+            model = self.sw.OpenDoc(self.sldprt_path, swDocPART)
+        except Exception:
+            model = None
         if model is None:
             try:
                 model = self.sw.OpenDoc5(self.sldprt_path, swDocPART, swOpenDocOptions_Silent, "", 0)
